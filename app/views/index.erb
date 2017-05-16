@@ -1,0 +1,11 @@
+<div>
+  <% if !logged_in? %>
+    <h2> Welcome to Maps and Memories! </h2>
+  <% end %>
+
+  <ul class=container container-table>
+    <% @users.each do |user| %>
+      <li><a href="/users/<%=user.id%>/profile"><%= user.name.capitalize %></a> </li>
+    <% end %>
+  </ul>
+</div>
